@@ -1,0 +1,55 @@
+/* homestyle.css */
+
+/* Container styles */
+.container {
+  padding: 20px;
+}
+
+/* Row styles */
+.row {
+  margin-bottom: 20px;
+}
+
+/* Table styles */
+.table {
+  width: 90%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #dee2e6;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Column styles */
+.col {
+  padding: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .table th,
+  .table td {
+    padding: 5px;
+  }
+}
