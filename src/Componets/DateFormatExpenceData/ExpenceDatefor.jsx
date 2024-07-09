@@ -14,7 +14,7 @@ const ExpenceDatefor = () => {
         const dataexpencedataformat = async (date) => {
             console.log(date);
             try {
-                const response = await axios.get('http://localhost:4000/expencedatadateformat', {
+                const response = await axios.get('https://moneybackend-figh.onrender.com/expencedatadateformat', {
                     params: {
                         date: date
                     }
