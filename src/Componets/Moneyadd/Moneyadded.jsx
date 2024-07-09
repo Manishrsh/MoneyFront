@@ -7,7 +7,7 @@ import axios from 'axios'
 const Moneyadd = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = async data =>{
-    await axios.post('http://localhost:4000/addmoney', data);
+    await axios.post('https://moneybackend-figh.onrender.com/addmoney', data);
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
