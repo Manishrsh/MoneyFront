@@ -16,19 +16,24 @@ function App() {
   
 
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-      <NavbarComponent />
-      <BrowserRouter>
+    <>
+    <Navbars/>
+     <Provider store={store}>
+      
+   <BrowserRouter>
         <Routes>
-		      
-          <Route path='/home' element={<div>hi</div>} />
-          <Route path='/addmoney' element={<MoneyAdd/>} />
-          
+        <Route path='/' element={<Home/>} />
+
+		      <Route path='/addmoney' element={<Moneyadd/>} />
+          <Route path='/expence' element={<Expence/>} />
+          <Route path='/expenceall' element={<AllExpence/>} />
+          <Route path='/expencealldatefor' element={<ExpenceDatefor/>} />
+
+
         </Routes>
       </BrowserRouter>
-    </ThemeProvider>
-    </div>
+      </Provider>
+    </>
   )
 }
 
