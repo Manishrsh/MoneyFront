@@ -16,19 +16,13 @@ function App() {
   
 
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-      <NavbarComponent />
-      <BrowserRouter>
-        <Routes>
-		      
-          <Route path='/home' element={<div>hi</div>} />
-          <Route path='/addmoney' element={<MoneyAdd/>} />
-          
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
-    </div>
+    <BrowserRouter>
+  <Routes>
+    <Route path='/home' element={<div>hi</div>} />
+    <Route path='/addmoney' element={<MoneyAdd/>} />
+  </Routes>
+</BrowserRouter>
+
   )
 }
 
