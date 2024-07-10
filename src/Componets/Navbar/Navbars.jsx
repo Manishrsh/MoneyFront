@@ -2,10 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './navbarstyle.css'
 
 function Navbars() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary mb-3">
+    <Navbar id='navbars' collapseOnSelect expand="lg" className="bg-body-tertiary mb-3">
       <Container>
         <Navbar.Brand href="/">Scale</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

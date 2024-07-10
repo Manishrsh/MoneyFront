@@ -9,12 +9,13 @@
 .row {
   margin-bottom: 20px;
 }
-
+#tableContainer{overflow-y: scroll;}
 /* Table styles */
 .table {
   width: 90%;
   margin-bottom: 20px;
   border-collapse: collapse;
+  
 }
 
 .table th,
