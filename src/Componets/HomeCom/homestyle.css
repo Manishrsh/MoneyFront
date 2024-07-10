@@ -54,3 +54,23 @@
     padding: 5px;
   }
 }
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+::-webkit-scrollbar-track {
+    background: none; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: none; 
+  }
+  ::-webkit-scrollbar-track-piece{
+    background: none; 
+
+  }
+  :-webkit-resizer{
+    background: none; 
+
+  }
