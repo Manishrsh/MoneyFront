@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get('https://moneybackend-figh.onrender.com/expencedata');
+        const response = await axios.get('http://ec2-3-107-2-155.ap-southeast-2.compute.amazonaws.com:3005/expencedata');
         console.log(response.data)
         setexpencedata(response.data);
       } catch (error) {
