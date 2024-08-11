@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get('http://ec2-13-211-130-118.ap-southeast-2.compute.amazonaws.com
+        const response = await axios.get('http://ec2-13-211-130-118.ap-southeast-2.compute.amazonaws.com/expencedata
 ');
         console.log(response.data)
         setexpencedata(response.data);
