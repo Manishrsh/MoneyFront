@@ -7,6 +7,7 @@ const Expence = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = async data =>{
     await axios.post('https://moneymanagebackend.scalestore.shop/expence', data);
+    await axios.post('https://manishmoneymanage.tech/expence', data);
   };
 
   return (
