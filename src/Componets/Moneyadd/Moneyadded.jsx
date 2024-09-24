@@ -5,9 +5,16 @@ import axios from 'axios'
 
 
 const Moneyadd = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, formState: { errors } , reset} = useForm();
   const onSubmit = async data =>{
-    await axios.post('https://moneymanagebackend.scalestore.shop/addmoney', data);
+
+    try {
+      await axios.post('https://moneymanagebackend.scalestore.shop/addmoney', data);
+      reset();
+    } catch (error) {
+      alert("something wrong")
+    }
+    
   };
   return (
     <div id='flexbox'>
