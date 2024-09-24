@@ -6,7 +6,7 @@ import axios from 'axios'
 const Expence = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = async data =>{
-    await axios.post('https://moneybackend-figh.onrender.com/expence', data);
+    await axios.post('https://moneymanagebackend.scalestore.shop/expence', data);
   };
 
   return (

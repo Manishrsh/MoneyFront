@@ -9,7 +9,7 @@ const AllExpence = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get('https://moneybackend-figh.onrender.com/expencedataall');
+        const response = await axios.get('https://moneymanagebackend.scalestore.shop/expencedataall');
         console.log(response);
         setexpencedata(response.data);
       } catch (error) {
