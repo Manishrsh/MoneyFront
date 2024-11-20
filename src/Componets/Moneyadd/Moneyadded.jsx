@@ -9,7 +9,7 @@ const Moneyadd = () => {
   const onSubmit = async data =>{
 
     try {
-      await axios.post('https://moneymanagebackend.scalestore.shop/addmoney', data);
+      await axios.post('https://api.manishmoneymanage.tech/addmoney', data);
       reset();
     } catch (error) {
       alert("something wrong")

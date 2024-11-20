@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get('https://moneymanagebackend.scalestore.shop/expencedata');
+        const response = await axios.get('https://api.manishmoneymanage.tech/expencedata');
         console.log(response.data)
         setexpencedata(response.data);
       } catch (error) {
