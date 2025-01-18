@@ -18,11 +18,13 @@ function App() {
 
   return (
     <>
-    <Navbars/>
+   
      <Provider store={store}>
       
    <BrowserRouter>
+   <Navbars/>
         <Routes>
+          
         <Route path='/' element={<Home/>} />
 
 		      <Route path='/addmoney' element={<Moneyadd/>} />
