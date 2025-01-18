@@ -11,6 +11,7 @@ import ExpenceDatefor from './Componets/DateFormatExpenceData/ExpenceDatefor';
 import { store } from '../src/Componets/Store/store'
 import { Provider } from 'react-redux'
 import Navbars from './Componets/Navbar/Navbars';
+import Category from './Componets/CategoryAdd/Category';
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
           <Route path='/expence' element={<Expence/>} />
           <Route path='/expenceall' element={<AllExpence/>} />
           <Route path='/expencealldatefor' element={<ExpenceDatefor/>} />
+          <Route path = '/addcategory' element={<Category/>} />
 
 
         </Routes>
