@@ -8,7 +8,7 @@ const Expence = () => {
   const onSubmit = async data =>{
     try {
       console.log(data);
-      await axios.post('http://3.25.54.8:4000/expence', data);
+      await axios.get('https://manishmoneymanage.tech/expence', data);
       reset();
     } catch (error) {
       alert("something went wrong")
@@ -17,7 +17,7 @@ const Expence = () => {
   useEffect(() => {
     const fetchCategory = async () => {
       try {
-        const response = await axios.post('http://3.25.54.8:4000/category');
+        const response = await axios.get('https://manishmoneymanage.tech/category');
           setCategory(response.data);
         console.log(response.data);
       } catch (error) {
