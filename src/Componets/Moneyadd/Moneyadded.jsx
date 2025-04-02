@@ -11,7 +11,7 @@ const Moneyadd = () => {
   const onSubmit = async data =>{
 
     try {
-      await axios.post('https://moneyapi.manishmoneymanage.tech/addmoney', data);
+      await axios.post('http://3.25.54.8:4000/addmoney', data);
       toast.success('Successfully Added!')
       reset();
     } catch (error) {
