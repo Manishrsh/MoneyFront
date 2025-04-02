@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get('http://3.25.54.8:4000/expencedata');
+        const response = await axios.get('http://manishmoneymanage.tech/expencedata');
         console.log(response.data)
         setexpencedata(response.data);
       } catch (error) {
