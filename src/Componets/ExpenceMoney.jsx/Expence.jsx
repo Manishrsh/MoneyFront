@@ -8,7 +8,7 @@ const Expence = () => {
   const onSubmit = async data =>{
     try {
       console.log(data);
-      await axios.get('https://manishmoneymanage.tech/expence', data);
+      await axios.post('https://manishmoneymanage.tech/expence', data);
       reset();
     } catch (error) {
       alert("something went wrong")
