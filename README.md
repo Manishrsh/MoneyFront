@@ -1,8 +1,47 @@
-# React + Vite
+# MoneyFront (Frontend + Backend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is now configured to run as a full-stack app:
 
-Currently, two official plugins are available:
+- **Frontend:** React + Vite
+- **Backend:** Node HTTP server (`server/index.js`)
+- **Production mode:** backend serves the built frontend from `dist/`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run in development
+
+Use two terminals:
+
+```bash
+npm run dev:frontend
+```
+
+```bash
+npm run dev:backend
+```
+
+- Frontend: `http://localhost:5173`
+- Backend health: `http://localhost:8080/api/health`
+- Frontend calls to `/api/*` are proxied to backend via Vite config.
+
+## Production build + run
+
+```bash
+npm run build
+npm run start
+```
+
+- Backend serves API and static frontend from `dist/`.
+- Default port is `8080`.
+
+## Environment variables
+
+- `PORT` (optional): backend listen port (default `8080`)
+- `NODE_ENV=production` required when running `npm run start`
+
+## Deployment checklist
+
+1. Install dependencies: `npm ci`
+2. Build frontend: `npm run build`
+3. Start backend: `npm run start`
+4. Validate health endpoint: `GET /api/health`
+5. Validate SPA routing by opening frontend routes directly
+
