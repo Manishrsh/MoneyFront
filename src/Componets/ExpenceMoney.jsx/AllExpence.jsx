@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import apiClient from '../../apiClient';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import './allexpence.css'; // Ensure this CSS file includes the new styles
 
@@ -9,7 +9,7 @@ const AllExpence = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get('https://manishmoneymanage.tech/expencedataall');
+        const response = await apiClient.get('/expencedataall');
         console.log(response);
         setexpencedata(response.data);
       } catch (error) {

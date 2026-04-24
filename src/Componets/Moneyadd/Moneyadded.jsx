@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './style.css';
-import axios from 'axios'
+import apiClient from '../../apiClient'
 import { Toast } from 'react-bootstrap';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -11,7 +11,7 @@ const Moneyadd = () => {
   const onSubmit = async data =>{
 
     try {
-      await axios.post('https://manishmoneymanage.tech/addmoney', data);
+      await apiClient.post('/addmoney', data);
       toast.success('Successfully Added!')
       reset();
     } catch (error) {
