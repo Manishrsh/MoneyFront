@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import apiClient from '../../apiClient';
 import { useSelector } from 'react-redux';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 
@@ -14,7 +14,7 @@ const ExpenceDatefor = () => {
         const dataexpencedataformat = async (date) => {
             console.log(date);
             try {
-                const response = await axios.get('https://manishmoneymanage.tech/expencedatadateformat', {
+                const response = await apiClient.get('/expencedatadateformat', {
                     params: {
                         date: date
                     }

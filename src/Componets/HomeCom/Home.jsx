@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import apiClient from '../../apiClient';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './homestyle.css';
@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get('http://3.25.54.8:4000/expencedata');
+        const response = await apiClient.get('/expencedata');
         console.log(response.data)
         setexpencedata(response.data);
       } catch (error) {

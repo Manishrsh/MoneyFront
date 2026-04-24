@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './style.css';
-import axios from 'axios'
+import apiClient from '../../apiClient'
 
 const Expence = () => {
   const { register, handleSubmit, watch, formState: { errors } , reset} = useForm();
   const onSubmit = async data =>{
     try {
       console.log(data);
-      await axios.post('https://manishmoneymanage.tech/expence', data);
+      await apiClient.post('/expence', data);
       reset();
     } catch (error) {
       alert("something went wrong")
@@ -17,7 +17,7 @@ const Expence = () => {
   useEffect(() => {
     const fetchCategory = async () => {
       try {
-        const response = await axios.get('https://manishmoneymanage.tech/category');
+        const response = await apiClient.get('/category');
           setCategory(response.data);
         console.log(response.data);
       } catch (error) {
